@@ -14,7 +14,7 @@ var (
 
 
 func Init_log() {
-	file, log_err := os.OpenFile("logs.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
+	file, log_err := os.OpenFile("logs.txt", os.O_CREATE|os.O_WRONLY, 0666)
     if log_err != nil {
         log.Fatal(log_err)
     }

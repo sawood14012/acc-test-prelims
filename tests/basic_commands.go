@@ -2,6 +2,7 @@ package tests
 
 import (
 	"os/exec"
+	"runtime"
 	"github.com/fabric8-analytics/acceptance_tests/log"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
@@ -30,4 +31,70 @@ func TestCRDA_help() {
 		
 	})
 
+}
+
+func TestCRDA_completion() {
+	It("Runs and Validate completion command", func(){
+		if (runtime.GOOS == "darwin" || runtime.GOOS == "linux"){
+			cmd := exec.Command("crda", "completion", "bash")
+			stdout, err := cmd.Output()
+			acc_log.InfoLogger.Println(string(stdout))
+		    Expect(err).NotTo(HaveOccurred())
+		} else if (runtime.GOOS == "windows") {
+			cmd := exec.Command("crda", "completion", "powershell")
+			stdout, err := cmd.Output()
+			acc_log.InfoLogger.Println(string(stdout))
+			Expect(err).NotTo(HaveOccurred())
+			
+		}else {
+			Skip("No supporting operating system");
+		}
+	})
+}
+
+func TestCRDA_all_commands_help() {
+	It("analyse command has help page", func(){
+		cmd := exec.Command("crda", "analyse", "--help")
+		stdout, err := cmd.Output()
+		acc_log.InfoLogger.Println(string(stdout))
+		Expect(err).NotTo(HaveOccurred())
+	})
+	It("auth command has help page", func(){
+		cmd := exec.Command("crda", "auth", "--help")
+		stdout, err := cmd.Output()
+		acc_log.InfoLogger.Println(string(stdout))
+		Expect(err).NotTo(HaveOccurred())
+		
+	})
+	It("completion command has help page", func(){
+		cmd := exec.Command("crda", "completion", "--help")
+		stdout, err := cmd.Output()
+		acc_log.InfoLogger.Println(string(stdout))
+		Expect(err).NotTo(HaveOccurred())
+		
+	})
+	It("version command has help page", func(){
+		cmd := exec.Command("crda", "version", "--help")
+		stdout, err := cmd.Output()
+		acc_log.InfoLogger.Println(string(stdout))
+		Expect(err).NotTo(HaveOccurred())
+		
+	})
+	It("help command has help page", func(){
+		cmd := exec.Command("crda", "help", "bash")
+		stdout, err := cmd.Output()
+		acc_log.InfoLogger.Println(string(stdout))
+		Expect(err).NotTo(HaveOccurred())
+		
+	})
+}
+
+func TestCRDA_analyse_without_file() {
+	It("Validate analyse without flags throws error", func(){
+		cmd := exec.Command("crda", "analyse")
+		stdout, err := cmd.Output()
+		acc_log.InfoLogger.Println(string(stdout))
+		Expect(err).To(HaveOccurred())
+		
+	})
 }
