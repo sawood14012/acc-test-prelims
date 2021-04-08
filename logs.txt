@@ -1,21 +1,20 @@
-INFO: 2021/04/08 18:54:11 auth.go:16: To get Snyk Token, Please click https://app.snyk.io/redhat/snyk-token
+INFO: 2021/04/08 19:40:24 auth.go:16: To get Snyk Token, Please click https://app.snyk.io/redhat/snyk-token
 
 [?25l[2K[1m[32mSnyk Token[0m [2m[Press Enter to continue][0m: █
 [1A[2K[2K
 [?25h
-INFO: 2021/04/08 18:54:11 auth.go:24: To get Snyk Token, Please click https://app.snyk.io/redhat/snyk-token
+INFO: 2021/04/08 19:40:24 auth.go:24: To get Snyk Token, Please click https://app.snyk.io/redhat/snyk-token
 
 [?25l[2K[1m[32mSnyk Token[0m [2m[Press Enter to continue][0m: █
 [1A[2K[2K
 [?25h
-INFO: 2021/04/08 18:54:13 auth.go:34: Successfully Registered. 
+INFO: 2021/04/08 19:40:24 auth.go:34: To get Snyk Token, Please click https://app.snyk.io/redhat/snyk-token
 
-[92;1mcrda_key: [0m[32md931dd95-ab1f-4f74-9a9f-fb50f60e4ea9[0m
-
-This key is confidential, Please keep it safe!. 
-
-INFO: 2021/04/08 18:54:13 common.go:161: 
-INFO: 2021/04/08 18:54:13 common.go:168: Cli tool to interact with CRDA Platform. This tool performs token Authentication and verbose Analyses of Dependency Stack. 
+[?25l[2K[1m[32mSnyk Token[0m [2m[Press Enter to continue][0m: █
+[1A[2K[2K
+[?25h
+INFO: 2021/04/08 19:40:24 common.go:161: 
+INFO: 2021/04/08 19:40:24 common.go:168: Cli tool to interact with CRDA Platform. This tool performs token Authentication and verbose Analyses of Dependency Stack. 
 	
 	Authenticated token can be used as Auth Token to interact with CRDA Platform.
 
@@ -36,10 +35,10 @@ Flags:
 
 Use "crda [command] --help" for more information about a command.
 
-INFO: 2021/04/08 18:54:13 common.go:175: 
-INFO: 2021/04/08 18:54:13 basic_commands.go:16: v0.1.0-6236425 darwin/amd64  BuildDate: Tue, 06 Apr 2021 16:34:32 IST  Vendor: Red Hat
+INFO: 2021/04/08 19:40:24 common.go:175: 
+INFO: 2021/04/08 19:40:24 basic_commands.go:16: v0.1.0-6236425 darwin/amd64  BuildDate: Tue, 06 Apr 2021 16:34:32 IST  Vendor: Red Hat
 
-INFO: 2021/04/08 18:54:13 basic_commands.go:39: Cli tool to interact with CRDA Platform. This tool performs token Authentication and verbose Analyses of Dependency Stack. 
+INFO: 2021/04/08 19:40:24 basic_commands.go:39: Cli tool to interact with CRDA Platform. This tool performs token Authentication and verbose Analyses of Dependency Stack. 
 	
 	Authenticated token can be used as Auth Token to interact with CRDA Platform.
 
@@ -60,7 +59,7 @@ Flags:
 
 Use "crda [command] --help" for more information about a command.
 
-INFO: 2021/04/08 18:54:13 basic_commands.go:51: # bash completion for crda                                 -*- shell-script -*-
+INFO: 2021/04/08 19:40:24 basic_commands.go:51: # bash completion for crda                                 -*- shell-script -*-
 
 __crda_debug()
 {
@@ -622,7 +621,7 @@ fi
 
 # ex: ts=4 sw=4 et filetype=sh
 
-INFO: 2021/04/08 18:54:13 basic_commands.go:69: Get detailed report of vulnerabilities. Supported ecosystems are Pypi (Python), Maven (Java), Npm (Node) and Golang (Go).
+INFO: 2021/04/08 19:40:24 basic_commands.go:69: Get detailed report of vulnerabilities. Supported ecosystems are Pypi (Python), Maven (Java), Npm (Node) and Golang (Go).
 If stack has Vulnerabilities, command will exit with status code 2.
 
 Usage:
@@ -637,7 +636,7 @@ Global Flags:
   -d, --debug      Sets Log level to Debug.
   -c, --no-color   Toggle colors in output.
 
-INFO: 2021/04/08 18:54:13 basic_commands.go:75: Command maps Snyk Token with UUID and Outputs 'crda_key' for further Authentication.
+INFO: 2021/04/08 19:40:24 basic_commands.go:75: Command maps Snyk Token with UUID and Outputs 'crda_key' for further Authentication.
 	
 	To get "Snyk Token" Please click here: https://app.snyk.io/redhat/snyk-token
 
@@ -652,7 +651,7 @@ Global Flags:
   -d, --debug      Sets Log level to Debug.
   -c, --no-color   Toggle colors in output.
 
-INFO: 2021/04/08 18:54:13 basic_commands.go:82: To load completions:
+INFO: 2021/04/08 19:40:24 basic_commands.go:82: To load completions:
 
 	Bash:
 	
@@ -693,7 +692,7 @@ Global Flags:
   -d, --debug      Sets Log level to Debug.
   -c, --no-color   Toggle colors in output.
 
-INFO: 2021/04/08 18:54:13 basic_commands.go:89: Command to output version of a binary.
+INFO: 2021/04/08 19:40:24 basic_commands.go:89: Command to output version of a binary.
 
 Usage:
   crda version [flags]
@@ -705,7 +704,7 @@ Global Flags:
   -d, --debug      Sets Log level to Debug.
   -c, --no-color   Toggle colors in output.
 
-INFO: 2021/04/08 18:54:13 basic_commands.go:96: Cli tool to interact with CRDA Platform. This tool performs token Authentication and verbose Analyses of Dependency Stack. 
+INFO: 2021/04/08 19:40:24 basic_commands.go:96: Cli tool to interact with CRDA Platform. This tool performs token Authentication and verbose Analyses of Dependency Stack. 
 	
 	Authenticated token can be used as Auth Token to interact with CRDA Platform.
 
@@ -726,13 +725,13 @@ Flags:
 
 Use "crda [command] --help" for more information about a command.
 
-INFO: 2021/04/08 18:54:13 basic_commands.go:106: 
-INFO: 2021/04/08 18:54:13 common.go:248: /Users/sawood/go/src/github.com/fabric8-analytics/acceptance_tests/manifests/go.mod.template
-INFO: 2021/04/08 18:54:13 common.go:249: /Users/sawood/go/src/github.com/fabric8-analytics/acceptance_tests/data/go.mod
-INFO: 2021/04/08 18:54:13 common.go:263: /Users/sawood/go/src/github.com/fabric8-analytics/acceptance_tests/manifests/main.go.template
-INFO: 2021/04/08 18:54:13 common.go:264: /Users/sawood/go/src/github.com/fabric8-analytics/acceptance_tests/data/main.go
-INFO: 2021/04/08 18:54:13 common.go:58: 
-INFO: 2021/04/08 18:54:21 common.go:77: Analysing your Dependency Stack! Please wait...
+INFO: 2021/04/08 19:40:24 basic_commands.go:106: 
+INFO: 2021/04/08 19:40:24 common.go:248: /Users/sawood/go/src/github.com/fabric8-analytics/acceptance_tests/manifests/go.mod.template
+INFO: 2021/04/08 19:40:24 common.go:249: /Users/sawood/go/src/github.com/fabric8-analytics/acceptance_tests/data/go.mod
+INFO: 2021/04/08 19:40:24 common.go:263: /Users/sawood/go/src/github.com/fabric8-analytics/acceptance_tests/manifests/main.go.template
+INFO: 2021/04/08 19:40:24 common.go:264: /Users/sawood/go/src/github.com/fabric8-analytics/acceptance_tests/data/main.go
+INFO: 2021/04/08 19:40:24 common.go:58: 
+:21 common.go:77: Analysing your Dependency Stack! Please wait...
 Summary Report for Analyses:
 
 [97;1mTotal Scanned Dependencies: [0m[97;1m4[0m

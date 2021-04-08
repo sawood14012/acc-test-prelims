@@ -3,3 +3,4 @@ data/
 .*coverprofile
 .logs.txt
 coverage/
+.ginkgo.report
