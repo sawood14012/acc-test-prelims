@@ -22,4 +22,4 @@ Feature: Validate there is a help page for all commands
     Scenario: check help command has help page
         Given system is running 
         When I run "crda help bash" command
-        Then it should run and validate "crda hrlp bash" command
+        Then it should run and validate "crda help bash" command
