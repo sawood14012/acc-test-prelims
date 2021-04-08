@@ -1,6 +1,6 @@
 .env
 data/
-.*coverprofile
-.logs.txt
+*.coverprofile
+logs.txt
 coverage/
 .ginkgo.report
