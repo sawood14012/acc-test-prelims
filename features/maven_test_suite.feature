@@ -54,5 +54,3 @@ Feature: Test CRDA analyse Maven
         And Copy Manifest
         And Should be able to run analyse without error
         And I should perform cleanup
-
-    

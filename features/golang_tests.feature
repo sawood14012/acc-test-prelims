@@ -68,7 +68,3 @@ Feature: Test CRDA analyse Go
         And I should able to run go mod tidy
         And I Should be able to run crda analyse without error
         And I should perform cleanup
-
-    
-
-    

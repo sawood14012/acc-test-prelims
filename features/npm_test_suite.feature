@@ -52,7 +52,3 @@ Feature: Test CRDA analyse Npm
         And I should Install Dependencies to run Stack analyses
         And I should Validate analyse for npm ecosystem without vulns with json
         And I should Cleanup
-
-    
-
-    
