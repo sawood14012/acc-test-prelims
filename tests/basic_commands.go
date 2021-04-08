@@ -9,7 +9,6 @@ import (
 )
 
 
-
 func TestCRDA_version() {
 
 	It("Runs and Validate CLI version", func(){
@@ -20,6 +19,18 @@ func TestCRDA_version() {
 		
 	})
 
+}
+
+func TestInvalidPath(){
+	It("Should throw error if i send invalid file path", Validate_invalid_file_path)
+}
+
+func TestInvalidCommand(){
+	It("Should throw error when run an invalid command", Validate_invalid_command)
+}
+
+func TestInvalidFlag(){
+	It("Should throw an error when set an invalid flag", Validate_invalid_flag)
 }
 
 func TestCRDA_help() {

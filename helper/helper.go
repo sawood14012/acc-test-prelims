@@ -36,6 +36,53 @@ func Cleanup_npm(filepath string) error {
 	return nil
 }
 
+func CreateData_dir() error {
+	err := os.Mkdir("data", 0755)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func Cleanup_suite() error {
+	err := os.RemoveAll("/data")
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func Cleanup_mvn(filepath string) error {
+	fmt.Println(filepath)
+	err := os.Remove(filepath + "/pom.xml")
+	if err != nil{
+		return err
+	}
+	return nil
+}
+
+func Cleanup_go(filepath string) error {
+	fmt.Println(filepath)
+	err := os.Remove(filepath + "/go.sum")
+	err1 := os.Remove(filepath + "/go.mod")
+	err2 := os.Remove(filepath + "/main.go")
+	if err != nil || err1 != nil || err2 != nil{
+		return err
+	}
+	return nil
+}
+
+func Cleanup_pypi(filepath string) error {
+	fmt.Println(filepath)
+	err := os.Remove(filepath + "/requirements.txt")
+	err1 := os.RemoveAll(filepath + "/env/")
+	if err != nil||err1 != nil{
+		return err
+	}
+	return nil
+}
+
+
 func Copy_contents_to_target(filename string, target string) error {
 	from, err := os.Open(filename)
 	if err != nil {

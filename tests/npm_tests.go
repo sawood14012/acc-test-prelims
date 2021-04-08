@@ -3,67 +3,70 @@ package tests
 import (
 	. "github.com/onsi/ginkgo"
 )
-var (
-	Path string = "/data"
-	pwd string
-	err error
-	manifests string = "/manifests"
-	file string = "/package.json"
-	target string = "/package.json"
-)
 
+func NpmTestSuite(){
+	BeforeEach(func(){
+		file = "/package.json"
+		target = "/package.json"
+	})
+	When("I test analyse for npm with vulns", TestCRDA_analyse_npm)
+	When("I test analyse for npm with vulns with json", TestCRDA_analyse_npm_json)
+	When("I test analyse for npm with vulns with verbose", TestCRDA_analyse_npm_verbose)
+	When("I test analyse for npm with vulns with debug", TestCRDA_analyse_npm_debug)
+	When("I test analyse for npm with vulns with all flags set true", TestCRDA_analyse_npm_all_flags)
+	When("I test analyse for npm without vulns with json", TestCRDA_analyse_npm_json_no_vulns)
+
+}
 
 func TestCRDA_analyse_npm() {
-	It("Get Absolute Path", GetAbsPath)
-	It("Copy Manifest with vulnerablities", Copy_manifests)
-	It("Install Dependencies to run Stack analyses", Install_npm_deps)
-	It("Validate analyse for npm ecosystem", Validate_analse_npm)
-	It("Cleanup", Cleanup_npm)
+	It("I should Get Absolute Path", GetAbsPath)
+	It("I should Copy Manifest", Copy_manifests)
+	It("I should Install Dependencies to run Stack analyses", Install_npm_deps)
+	It("I should Validate analyse for npm ecosystem", Validate_analse)
+	It("I should Cleanup", Cleanup_npm)
 }
 
 func TestCRDA_analyse_npm_json() {
-	It("Get Absolute Path", GetAbsPath)
-	It("Copy Manifest with vulnerablities", Copy_manifests)
-	It("Install Dependencies to run Stack analyses", Install_npm_deps)
-	It("Validate analyse for npm ecosystem with vulns", Validate_analse_npm_json_vulns)
-	It("Cleanup", Cleanup_npm)
+	It("I should Get Absolute Path", GetAbsPath)
+	It("I should Copy Manifest", Copy_manifests)
+	It("I should Install Dependencies to run Stack analyses", Install_npm_deps)
+	It("I should Validate analyse for npm ecosystem with vulns", Validate_analse_json_vulns)
+	It("I should Cleanup", Cleanup_npm)
 }
 
 func TestCRDA_analyse_npm_json_no_vulns() {
 	BeforeEach(func(){
 		file = "/vulns.json"
 	})
-	It("Get Absolute Path", GetAbsPath)
-	It("Copy Manifest without vulnerablities", Copy_manifests)
-	It("Install Dependencies to run Stack analyses", Install_npm_deps)
-	It("Validate analyse for npm ecosystem without vulns", Validate_analse_npm_json_no_vulns)
-	It("Cleanup", Cleanup_npm)
+	It("I should Get Absolute Path", GetAbsPath)
+	It("I should Copy Manifest", Copy_manifests)
+	It("I should Install Dependencies to run Stack analyses", Install_npm_deps)
+	It("I should Validate analyse for npm ecosystem without vulns", Validate_analse_json_no_vulns)
+	It("I should Cleanup", Cleanup_npm)
 }
 
-func TestCRDA_analyse_npm_json_verbose() {
-	BeforeEach(func(){
-		file = "/package.json"
-	})
-	It("Get Absolute Path", GetAbsPath)
-	It("Copy Manifest with vulnerablities", Copy_manifests)
-	It("Install Dependencies to run Stack analyses", Install_npm_deps)
-	It("Validate analyse for npm ecosystem with vulns json and verbose", Validate_analse_npm_json__vuln_verbose)
-	It("Cleanup", Cleanup_npm)
+func TestCRDA_analyse_npm_verbose() {
+	It("I should Get Absolute Path", GetAbsPath)
+	It("I should Copy Manifest", Copy_manifests)
+	It("I should Install Dependencies to run Stack analyses", Install_npm_deps)
+	It("I should Validate analyse for npm ecosystem with vulns json and verbose", Validate_analse_vuln_verbose)
+	It("I should Cleanup", Cleanup_npm)
 }
 
-func TestCRDA_analyse_npm_debug() {
-	It("Get Absolute Path", GetAbsPath)
-	It("Copy Manifest with vulnerablities", Copy_manifests)
-	It("Install Dependencies to run Stack analyses", Install_npm_deps)
-	It("Validate analyse for npm ecosystem with vulns with debug", Validate_analse_npm_vuln_debug)
-	It("Cleanup", Cleanup_npm)
-}
+ func TestCRDA_analyse_npm_debug() {
+	It("I should Get Absolute Path", GetAbsPath)
+	It("I should Copy Manifest", Copy_manifests)
+	It("I should Install Dependencies to run Stack analyses", Install_npm_deps)
+	It("I should Validate analyse for npm ecosystem with vulns with debug", Validate_analse_vuln_debug)
+	It("I should Cleanup", Cleanup_npm)
+} 
+
 func TestCRDA_analyse_npm_all_flags() {
-	It("Get Absolute Path", GetAbsPath)
-	It("Copy Manifest with vulnerablities", Copy_manifests)
-	It("Install Dependencies to run Stack analyses", Install_npm_deps)
-	It("Validate analyse for npm ecosystem with vulns and all flags set true", Validate_analse_npm_all_flags)
-	It("Cleanup", Cleanup_npm)
+	It("I should Get Absolute Path", GetAbsPath)
+	It("I should Copy Manifest", Copy_manifests)
+	It("I should Install Dependencies to run Stack analyses", Install_npm_deps)
+	It("I should Validate analyse for npm ecosystem with vulns and all flags set true", Validate_analse_all_flags)
+	It("I should Cleanup", Cleanup_npm)
 }
 
 

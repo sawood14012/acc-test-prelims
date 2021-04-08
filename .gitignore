@@ -1,0 +1,5 @@
+.env
+data/
+.*coverprofile
+logs.txt
+go.sum
