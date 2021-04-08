@@ -1,4 +1,4 @@
-Feature: run CRDA analyse Go command
+Feature: Test CRDA analyse Go
     Scenario: Check crda analyse go command with vulns
         Given system is running and authenticated with valid snyk token
         When I run crda analyse command for Go with vulns
