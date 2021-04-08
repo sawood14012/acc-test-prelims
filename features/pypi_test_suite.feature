@@ -2,7 +2,7 @@ Feature: Test CRDA analyse Pypi
     Scenario: Check crda analyse command for pypi with vulns
         Given system is running and authenticating with valid snyk token
         When I test analyse command for pypi with vulns
-        Then Should be able to get the absolute path
+        Then I Should be able to get the absolute path
         And I should Copy Manifest
         And I should able to run pip install
         And I Should be able to run analyse without error
@@ -11,7 +11,7 @@ Feature: Test CRDA analyse Pypi
     Scenario: Check crda analyse command for pypi with vulns json
         Given system is running and authenticating with valid snyk token
         When I test analyse command for pypi with vulns json
-        Then Should be able to get the absolute path
+        Then I Should be able to get the absolute path
         And I should Copy Manifest
         And I should able to run pip install
         And I Should be able to run analyse without error
@@ -20,7 +20,7 @@ Feature: Test CRDA analyse Pypi
     Scenario: Check crda analyse command for pypi with vulns and verbose
         Given system is running and authenticating with valid snyk token
         When I test analyse command for pypi with vulns and verbose
-        Then Should be able to get the absolute path
+        Then I Should be able to get the absolute path
         And I should Copy Manifest
         And I should able to run pip install
         And I Should be able to run analyse without error
@@ -29,7 +29,7 @@ Feature: Test CRDA analyse Pypi
     Scenario: Check crda analyse command for pypi with vulns and debug
         Given system is running and authenticating with valid snyk token
         When I test analyse command for pypi with vulns and debug
-        Then Should be able to get the absolute path
+        Then I Should be able to get the absolute path
         And I should Copy Manifest
         And I should able to run pip install
         And I Should be able to run analyse without error
@@ -38,7 +38,7 @@ Feature: Test CRDA analyse Pypi
     Scenario: Check crda analyse command for pypi with vulns and all flags true
         Given system is running and authenticating with valid snyk token
         When I test analyse command for pypi with vulns and all flags true
-        Then Should be able to get the absolute path
+        Then I Should be able to get the absolute path
         And I should Copy Manifest
         And I should able to run pip install
         And I Should be able to run analyse without error
@@ -47,7 +47,7 @@ Feature: Test CRDA analyse Pypi
     Scenario: Check crda analyse command for pypi without vulns
         Given system is running and authenticating with valid snyk token
         When I test analyse command for pypi without vulns
-        Then Should be able to get the absolute path
+        Then I Should be able to get the absolute path
         And I should Copy Manifest
         And I should able to run pip install
         And I Should be able to run analyse without error
@@ -56,7 +56,7 @@ Feature: Test CRDA analyse Pypi
     Scenario: Check crda analyse command for pypi without vulns json
         Given system is running and authenticating with valid snyk token
         When I test analyse command for pypi without vulns json
-        Then Should be able to get the absolute path
+        Then I Should be able to get the absolute path
         And I should Copy Manifest
         And I should able to run pip install
         And I Should be able to run analyse without error
