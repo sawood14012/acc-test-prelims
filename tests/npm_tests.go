@@ -4,6 +4,16 @@ import (
 	. "github.com/onsi/ginkgo"
 )
 
+func NpmTestSuitePR(){
+	BeforeEach(func(){
+		file = "/package.json"
+		target = "/package.json"
+	})
+	When("I test analyse for npm with vulns", TestCRDA_analyse_npm)
+	When("Test analyse with relative path", TestCRDA_analyse_with_relative_path_npm)
+
+}
+
 func NpmTestSuite(){
 	BeforeEach(func(){
 		file = "/package.json"
@@ -15,6 +25,7 @@ func NpmTestSuite(){
 	When("I test analyse for npm with vulns with debug", TestCRDA_analyse_npm_debug)
 	When("I test analyse for npm with vulns with all flags set true", TestCRDA_analyse_npm_all_flags)
 	When("I test analyse for npm without vulns with json", TestCRDA_analyse_npm_json_no_vulns)
+	When("Test analyse with relative path", TestCRDA_analyse_with_relative_path_npm)
 
 }
 
@@ -70,3 +81,15 @@ func TestCRDA_analyse_npm_all_flags() {
 }
 
 
+func TestCRDA_analyse_with_relative_path_npm() {
+	BeforeEach(func() {
+		file = "/package.json"
+		target = "/package.json"
+	})
+	When("I Test for analyse command with relative path npm", func() {
+		It("I should Copy Manifest", Copy_manifests)
+		It("I should Install Dependencies to run Stack analyses", Install_npm_deps)
+		It("Should be able to run analyse without error",  RunAnalyseRelative)
+		It("I should Cleanup", Cleanup_npm)
+	})
+}

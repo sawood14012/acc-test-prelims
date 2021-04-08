@@ -16,4 +16,4 @@ RUN python3 -m pip -V
 RUN pip3 -V
 RUN rpm -i https://github.com/fabric8-analytics/cli-tools/releases/download/v0.1.0/crda_0.1.0_Linux-64bit.rpm
 
-CMD [ "go test -test.v -ginkgo.failFast" ]
+ENTRYPOINT [ "/tests/test.sh" ]
